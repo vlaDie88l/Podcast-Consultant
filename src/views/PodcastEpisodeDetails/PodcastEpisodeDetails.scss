@@ -1,0 +1,62 @@
+.episode-details {
+  flex: 2 1 auto;
+
+  .episode {
+    margin-bottom: 20px;
+
+    &-title {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+
+    audio {
+      display: block;
+      margin-bottom: 15px;
+      width: 100%;
+    }
+
+    &-description {
+      font-size: 1rem;
+      p {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+.loading-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40vh; // Reduced height to move the spinner towards the top
+  flex-direction: column;
+  position: absolute;
+  left: 50%;
+  top: 15%; // Adjust this value if you want it more/less towards the top
+  transform: translateX(-50%);
+}
+
+.spinner {
+  border: 8px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top: 8px solid #000; // You can adjust the color to match your theme
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+.loading-text {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
