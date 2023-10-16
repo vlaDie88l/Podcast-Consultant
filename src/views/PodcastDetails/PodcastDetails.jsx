@@ -13,7 +13,6 @@ const PodcastDetails = () => {
     const fetchData = async () => {
       try {
         const data = await fetchPodcastDetails(id);
-        console.log(data);
         setPodcast(data);
       } catch (error) {
         console.error('Error fetching podcast details:', error);

@@ -22,7 +22,6 @@ const MainView = () => {
         Date.now() - storedTimestamp <= ONE_DAY_IN_MS
       ) {
         const parsedData = JSON.parse(storedData);
-        console.log(parsedData);
         setPodcasts(parsedData);
         setFilteredPodcasts(parsedData);
       } else {
