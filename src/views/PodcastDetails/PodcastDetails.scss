@@ -1,0 +1,95 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6; // improved readability
+}
+.podcast-details {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  justify-content: space-between;
+
+  .podcast-info {
+    flex: 1 1 auto;
+    max-width: 250px;
+    margin-right: 20px;
+
+    &-title {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    &-image {
+      width: 100%;
+      display: block;
+      border-radius: 8px; // Optional, for a rounded look
+    }
+  }
+
+  // PodcastDetails.scss
+
+  .go-back-btn {
+    padding: 10px 15px;
+    border: none;
+    background-color: #666; // Adjust color as needed
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-bottom: 15px; // Spacing from the image below
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #888; // A slightly lighter shade for hover
+    }
+  }
+
+  // If you want some responsive adjustments
+  @media (max-width: 768px) {
+    flex-direction: column;
+
+    .podcast-info {
+      margin-right: 0;
+      text-align: center;
+
+      &-title {
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+.loading-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40vh; // Reduced height to move the spinner towards the top
+  flex-direction: column;
+  position: absolute;
+  left: 50%;
+  top: 15%; // Adjust this value if you want it more/less towards the top
+  transform: translateX(-50%);
+}
+
+.spinner {
+  border: 8px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top: 8px solid #000; // You can adjust the color to match your theme
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+.loading-text {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
