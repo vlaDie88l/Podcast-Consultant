@@ -1,7 +1,7 @@
-import './MainView.scss';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { fetchTopPodcasts } from '../../api/api.jsx';
+import './MainView.scss';
 
 const ONE_DAY_IN_MS = 24 * 60 * 60 * 1000;
 
@@ -59,6 +59,7 @@ const MainView = () => {
     <div className="podcast-container">
       <div className="search-bar">
         <input
+          name="podcast-search"
           type="text"
           placeholder="Search podcasts..."
           value={filter}
